@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Collections;
 
 namespace WPF_7._1
 {
@@ -125,6 +126,8 @@ namespace WPF_7._1
                 File.WriteAllText(saveFileDialog.FileName, textBox.Text);
             }
         }
+
+       
     }
     
 }

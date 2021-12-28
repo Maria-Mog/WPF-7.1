@@ -127,6 +127,15 @@ namespace WPF_7._1
             }
         }
 
+        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
+        {
+            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            if (textBox != null)
+            {
+                textBox.FontFamily = new FontFamily(fontName);
+            }
+        }
+
        
     }
     

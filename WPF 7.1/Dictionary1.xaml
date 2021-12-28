@@ -4,13 +4,17 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 
-    <FontFamily x:Key="arial">
-        Arial
-    </FontFamily>
+    <FontFamily x:Key="arial">Arial</FontFamily>
     <FontFamily x:Key="TWR">Times New Roman</FontFamily>
     <FontFamily x:Key="Ver">Verdana</FontFamily>
-    
-   
+
+    <col:ArrayList x:Key="fontFamile">
+        <FontFamily>Arial</FontFamily>
+        <FontFamily>Times New Roman</FontFamily>
+        <FontFamily>Verdana</FontFamily>
+    </col:ArrayList>
+
+
     <col:ArrayList x:Key="fontSize">
         <sys:Double>12</sys:Double>
         <sys:Double>14</sys:Double>

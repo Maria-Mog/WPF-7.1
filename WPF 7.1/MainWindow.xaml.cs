@@ -26,7 +26,26 @@ namespace WPF_7._1
         public MainWindow()
         {
             InitializeComponent();
+            List<string> styles = new List<string>() { "Светлая тема", "Темная тема" };
+            boxStyle.ItemsSource = styles;
+            boxStyle.SelectionChanged += ThemeC;
+            boxStyle.SelectedIndex = 0;
         }
+
+        private void ThemeC(object sender, SelectionChangedEventArgs e)
+        {
+            int styleI = boxStyle.SelectedIndex;
+            Uri uri = new Uri("light.xaml", UriKind.Relative);
+            if (styleI == 1)
+            {
+                uri = new Uri("Dark.xaml", UriKind.Relative);
+            }
+
+            ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resource);
+        }
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
@@ -138,5 +157,5 @@ namespace WPF_7._1
 
        
     }
-    
+
 }

@@ -153,9 +153,7 @@ namespace WPF_7._1
             {
                 textBox.FontFamily = new FontFamily(fontName);
             }
-        }
-
-       
+        }        
     }
 
 }

@@ -7,8 +7,9 @@
         <Setter Property="Menu.Foreground" Value ="White"/>         
 
     </Style>
-    <Style x:Key="ToolBarStyle" BasedOn="{StaticResource MenuStyle}">
-    </Style>
+    <Style x:Key="ToolBarStyle" BasedOn="{StaticResource MenuStyle}">        
+    </Style>   
+
     <Style x:Key="TextBoxStyle" BasedOn="{StaticResource MenuStyle}">
         <Setter Property="TextBox.Padding" Value="10"/>
         <Setter Property="TextBox.TextAlignment" Value="Justify"/>

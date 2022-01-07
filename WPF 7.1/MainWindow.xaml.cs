@@ -46,25 +46,25 @@ namespace WPF_7._1
             Application.Current.Resources.MergedDictionaries.Add(resource);
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
-            if (textBox != null)
-            {
-                textBox.FontFamily = new FontFamily(fontName);
-            }
+        //private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+        //    if (textBox != null)
+        //    {
+        //        textBox.FontFamily = new FontFamily(fontName);
+        //    }
 
-        }
+        //}
 
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            string fontSize = ((sender as ComboBox).SelectedItem as TextBlock).Text;
-            if (textBox != null)
-            {
-                textBox.FontSize = double.Parse(fontSize);
+        //private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        //{
+        //    string fontSize = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+        //    if (textBox != null)
+        //    {
+        //        textBox.FontSize = double.Parse(fontSize);
 
-            }
-        }
+        //    }
+        //}
         bool normalWeight = false;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -145,15 +145,14 @@ namespace WPF_7._1
                 File.WriteAllText(saveFileDialog.FileName, textBox.Text);
             }
         }
-
-        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
+        
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
-            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
             if (textBox != null)
             {
-                textBox.FontFamily = new FontFamily(fontName);
+                textBox.Foreground = new SolidColorBrush(Colors.White);
             }
-        }        
+        }
+        
     }
-
 }
